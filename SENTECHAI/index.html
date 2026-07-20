@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENTECH - Électronique & Accessoires</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">SENTECH</div>
+            <nav class="nav">
+                <a href="#" onclick="showProducts()" class="nav-link active">Produits</a>
+                <a href="#" onclick="toggleCart()" class="nav-link cart-toggle">
+                    🛒 Panier <span id="cart-count" class="badge">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bienvenue chez SENTECH</h1>
+                <p>Les meilleurs accessoires électroniques au meilleur prix</p>
+            </div>
+        </section>
+
+        <!-- PRODUITS -->
+        <section id="products-section" class="products-section">
+            <div class="container">
+                <h2>Nos Produits</h2>
+                <div id="products-grid" class="products-grid"></div>
+            </div>
+        </section>
+
+        <!-- PANIER (caché par défaut) -->
+        <section id="cart-section" class="cart-section hidden">
+            <div class="container">
+                <div class="cart-header">
+                    <h2>Mon Panier</h2>
+                    <button onclick="toggleCart()" class="close-btn">✕</button>
+                </div>
+                <div id="cart-items" class="cart-items"></div>
+                <div class="cart-summary">
+                    <p class="total">Total: <span id="total-price">0</span> FCFA</p>
+                    <button onclick="checkout()" class="btn btn-primary">Procéder au paiement</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SENTECH. Tous droits réservés.</p>
+            <p>Contact: <a href="tel:+221703479765">+221 70 347 97 65</a></p>
+        </div>
+    </footer>
+
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
